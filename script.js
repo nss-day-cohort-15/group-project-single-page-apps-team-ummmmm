@@ -6,4 +6,4 @@ function showMessage(message){
   })
 }
 
-Messages.getMessage(showMessage);
+Chatty.getMessage(showMessage);
