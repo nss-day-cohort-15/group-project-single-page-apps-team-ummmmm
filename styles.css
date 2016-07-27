@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.dark{
+  background-color: darkgrey;
+}
+
+.large{
+  font-size: 2em;
+}
+
 .textAreaMinWidth {
   min-width: 100%;
   min-height: 500px;
