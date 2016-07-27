@@ -1,17 +1,22 @@
 [
   {
-    "message": "a"
+    "user": "Casey",
+    "message": "Hey! What's up, everyone?"
   },
   {
-    "message": "b"
+    "user": "Jacob",
+    "message": "Doing great!"
   },
   {
-    "message": "c"
+    "user": "Ali",
+    "message": "Feeling good!"
   },
   {
-    "message": "d"
+    "user": "Casey",
+    "message": "Pretty sweet app, huh?"
   },
   {
-    "message": "e"
+    "user": "Jacob",
+    "message": "I love chatting with friends! The year is 1997!"
   }
 ]
