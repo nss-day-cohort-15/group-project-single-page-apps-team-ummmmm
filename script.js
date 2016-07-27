@@ -8,8 +8,10 @@ function showMessage(message){
 
 Chatty.getMessage(showMessage);
 
-//EVENT LISTENERS
+//EVENT LISTENERS//
+//CLEAR MESSAGES BUTTON
 var message_area = document.querySelector(".message_area");
 document.querySelector(".clear").addEventListener("click", function(){
   message_area.innerHTML = null;
 })
+
