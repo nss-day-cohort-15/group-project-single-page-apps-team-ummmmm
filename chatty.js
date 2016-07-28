@@ -30,12 +30,21 @@ var Chatty = (function (){
     clearMessage: function () {
     document.querySelector(".clear").addEventListener("click", function (){
     _message = []
-    Chatty.showMessage()
-    console.log(_message)
+    Chatty.showMessage(_message)
+    checkForEmpty()
   })
     },
 
   }
+
+function checkForEmpty () {
+  if (_message === []) {
+    document.getElementById("clearButton").setAttribute("disabled", false);
+  } else {
+    document.getElementById("clearButton").setAttribute("disabled", true);
+  }
+}
+
 }())
 
 Chatty.getMessage(Chatty.showMessage);

@@ -12,3 +12,5 @@ large.addEventListener('click', function(){
 //LISTENER FOR clearMessage FUNCTION
 document.querySelector(".clear").addEventListener("click", Chatty.clearMessage)
 
+
+
