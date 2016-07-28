@@ -1,14 +1,15 @@
 var Chatty = (function (){
   var _message = [];
 
-function loadFirstMessages () {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'messages.json');
-  xhr.addEventListener('load', function(event){
-  _message = JSON.parse(event.target.responseText);
-  document.getElementById("userMessageDisplay").innerHTML = _message //Couldn't we use a callback function to show the messages w/ styling here?
-    })
- }
+// function loadFirstMessages () {
+//   var xhr = new XMLHttpRequest();
+//   xhr.open('GET', 'messages.json');
+//   xhr.addEventListener('load', function(event){
+//   _message = JSON.parse(event.target.responseText);
+//   document.getElementById("userMessageDisplay").innerHTML = _message //Couldn't we use a callback function to show the messages w/ styling here?
+//     })
+//  }
+counter = 0;
 
   return {
     getMessage: function(callback){
@@ -22,10 +23,16 @@ function loadFirstMessages () {
     },
 
     addMessage: function (username, userMessage) {
-      // username = document.getElementById("usernameInput").value
-      // userMessage = document.getElementById("userMessageInput").value
+      if (counter % 2 === 0) {
       document.getElementById("userMessageDisplay").innerHTML +=
         `<p class='message'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
+        counter++;
+        console.log(counter)
+      } else {
+      document.getElementById("userMessageDisplay").innerHTML +=
+        `<p class='message greyBackground'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
+        counter++;
+      }
     },
     showMessage: function (message){
       var message_div = document.querySelector("#userMessageDisplay");
