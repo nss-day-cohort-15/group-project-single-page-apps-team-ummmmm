@@ -1,7 +1,7 @@
 function showMessage(message){
    var message_div = document.querySelector("#userMessageDisplay");
    message.forEach(function(content){
-   message_div.innerHTML += `<p class='message'>${content.user}: ${content.message}
+   message_div.innerHTML += `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
                      <button class='remove'>delete</button></p>`;
   })
 }

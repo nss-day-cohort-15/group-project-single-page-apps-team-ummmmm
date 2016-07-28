@@ -13,6 +13,10 @@
   font-weight: bolder;
 }
 
-.greenBackground {
+/*.greenBackground {
+  background: lightgreen;
+}*/
+
+p:nth-child(even){
   background: lightgreen;
 }
