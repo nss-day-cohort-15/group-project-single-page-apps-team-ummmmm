@@ -9,7 +9,7 @@ var Chatty = (function (){
 //   document.getElementById("userMessageDisplay").innerHTML = _message //Couldn't we use a callback function to show the messages w/ styling here?
 //     })
 //  }
-counter = 0;
+var counter = 0;
 
   return {
     getMessage: function(callback){
@@ -27,7 +27,6 @@ counter = 0;
       document.getElementById("userMessageDisplay").innerHTML +=
         `<p class='message'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
         counter++;
-        console.log(counter)
       } else {
       document.getElementById("userMessageDisplay").innerHTML +=
         `<p class='message greyBackground'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
