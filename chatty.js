@@ -16,7 +16,7 @@ var Chatty = (function (){
       userMessageObject = {"user": username, "message": userMessage}
       _message.push(userMessageObject)
       Chatty.showMessage(_message)
-      },
+    },
 
     showMessage: function (message){
       var message_div = document.querySelector("#userMessageDisplay");
@@ -26,7 +26,15 @@ var Chatty = (function (){
       message_div.innerHTML +=  `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
                        <button class='remove'>delete</button></p>`;
   })
-},
+    },
+    clearMessage: function () {
+    document.querySelector(".clear").addEventListener("click", function (){
+    _message = []
+    Chatty.showMessage()
+    console.log(_message)
+  })
+    },
+
   }
 }())
 
