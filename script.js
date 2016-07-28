@@ -6,7 +6,7 @@ function showMessage(message){
   })
 }
 
-Chatty.getMessage(showMessage);
+Chatty.getMessage(showMessage); //This function loads the first five messages
 
 //EVENT LISTENERS//
 //CLEAR MESSAGES BUTTON
