@@ -1,6 +1,8 @@
 var Chatty = (function (){
   var _message = [];
 
+
+
   return {
     getMessage: function(callback){
       var xhr = new XMLHttpRequest();
@@ -15,6 +17,7 @@ var Chatty = (function (){
     addMessage: function (username, userMessage) {
       document.getElementById("userMessageDisplay").innerHTML +=
         `<p class='message'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
+        console.log(this)
       },
 
     showMessage: function (message){
@@ -25,7 +28,10 @@ var Chatty = (function (){
   })
 },
 
+
+
   }
 }())
 
+Chatty.getMessage(Chatty.showMessage);
 
