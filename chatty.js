@@ -16,6 +16,7 @@ var Chatty = (function (){
       userMessageObject = {"user": username, "message": userMessage}
       _message.push(userMessageObject)
       Chatty.showMessage(_message)
+      checkForEmpty()
     },
 
     showMessage: function (message){
@@ -26,22 +27,32 @@ var Chatty = (function (){
       message_div.innerHTML +=  `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
                        <button class='remove'>delete</button></p>`;
   })
-    },
-    clearMessage: function () {
-    document.querySelector(".clear").addEventListener("click", function (){
-    _message = []
-    Chatty.showMessage(_message)
-    checkForEmpty()
+      message_div.addEventListener("click", function(e){
+      if(e.target.className === "remove"){
+      message_div.removeChild(e.target.parentNode);
+      checkForEmpty()
+      }
   })
     },
 
+    clearMessage: function () {
+      document.querySelector(".clear").addEventListener("click", function (){
+      _message = []
+      Chatty.showMessage(_message)
+      checkForEmpty()
+  })
+    },
+
+
   }
+
+
 
 function checkForEmpty () {
   if (_message === []) {
-    document.getElementById("clearButton").setAttribute("disabled", false);
-  } else {
     document.getElementById("clearButton").setAttribute("disabled", true);
+  } else {
+    document.getElementById("clearButton").setAttribute("disabled", false);
   }
 }
 
