@@ -26,3 +26,6 @@ p:nth-child(even){
   background: lightgreen;
 }
 
+.smallLogo {
+  width: 50%;
+}
