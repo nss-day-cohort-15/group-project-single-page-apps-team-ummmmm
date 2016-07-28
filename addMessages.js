@@ -9,7 +9,9 @@ function checkForEnter(e) {
 function addMessage (e) {
   username = document.getElementById("usernameInput").value
   userMessage = document.getElementById("userMessageInput").value
-  document.getElementById("userMessageDisplay").innerHTML += `<p class='message'>${username}: ${userMessage}
+  var userMessageDisplay = document.getElementById("userMessageDisplay");
+  userMessageDisplay.innerHTML += `<p class='message'>${username}: ${userMessage}
                      <button class='remove'>delete</button></p>`;
 }
+
 

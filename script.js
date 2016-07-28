@@ -19,12 +19,12 @@ function clearMessages(){
 
 
   var dark = document.querySelector(".dark");
-  dark.addEventListener('change', function(){
+  dark.addEventListener('click', function(){
     document.querySelector('body').classList.toggle('dark');
   })
 
   var large = document.querySelector(".large");
-  large.addEventListener('change', function(){
+  large.addEventListener('click', function(){
     document.querySelector('body').classList.toggle('large');
   })
 
