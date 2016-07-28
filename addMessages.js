@@ -5,4 +5,3 @@ function checkForEnter(e) {
     userMessage = document.getElementById("userMessageInput").value
     Chatty.addMessage(username, userMessage)
   }
-}
