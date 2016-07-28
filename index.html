@@ -1,4 +1,4 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Chatty</title>
@@ -6,18 +6,45 @@ g<!DOCTYPE html>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-<div class="container">
+  <div class="container">
+  <!-- NAVBAR START -->
+  <nav class="row">
+  <!-- <div class="col-md-2"><img src="#PLACEHOLDERLOGO"></div> -->
+    <div class="col-md-2">
+      <img src="images/um_logo.png" class="smallLogo"></span>
+    </div>
+    <div class="col-md-2">
+      <input type="text" name="userInputField" id="usernameInput" class="userInputAreaWidth" placeholder="Username"></div>
+    <div class="col-md-6">
+      <input type="text" name="userInputField" id="userMessageInput" class="userInputAreaWidth" placeholder="Type your message here!">
+    </div>
+    <div class="col-md-2 clear">
+      <button id="clearButton">Clear Messages</button>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
 
-<h1>Here's a test header</h1>
-<div class="content">
-  <!-- HERE -->
-</div>
+<!-- STYLING CHECKBOXES START -->
+  <div class="row">
+    <div class="col-md-3 col-md-offset-4">
+      <label>Dark Theme: <input type="checkbox" class="dark" value="dark" name="darkTheme"></label>
+    </div>
 
+    <div class="col-md-3">
+      <label>Large Text: <input type="checkbox" class="large" value="large" name="largeText"></label>
+    </div>
+  </div>
+  <!-- STYLING CHECKBOXES END -->
 
-</div>
+  <!-- MESSAGE AREA START -->
+  <div class="textAreaMinWidth message_area" id="userMessageDisplay">
+    &nbsp
+    <!-- MESSAGE AREA END -->
+  </div>
+  <!-- CONTAINER END -->
+<script type="text/javascript" src="chatty.js"></script>
 <script type="text/javascript" src="addMessages.js"></script>
 <script type="text/javascript" src="script.js"></script>
-<script type="text/javascript" src="chatty.js"></script>
 <script type="text/javascript" src="deleteMessages.js"></script>
 </body>
 </html>

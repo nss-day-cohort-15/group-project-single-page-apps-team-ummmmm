@@ -1,32 +1,22 @@
 [
   {
-    "message": "a"
+    "user": "Casey",
+    "message": "Hey! What's up, everyone?"
   },
   {
-    "message": "a"
+    "user": "Jacob",
+    "message": "Doing great!"
   },
   {
-    "message": "a"
+    "user": "Ali",
+    "message": "Feeling good!"
   },
   {
-    "message": "a"
+    "user": "Casey",
+    "message": "Pretty sweet app, huh?"
   },
   {
-    "message": "a"
-  },
-  {
-    "message": "a"
-  },
-  {
-    "message": "a"
-  },
-  {
-    "message": "a"
-  },
-  {
-    "message": "a"
-  },
-  {
-    "message": "a"
+    "user": "Jacob",
+    "message": "I love chatting with friends! The year is 1997!"
   }
 ]

@@ -1,15 +1,8 @@
-var Messages = (function(){
-  var _message = [];
-
-  return {
-    getMessage: function(callback){
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'messages.json');
-      xhr.addEventListener('load', function(event){
-        _message = JSON.parse(event.target.responseText);
-        callback(_message);
-      })
-      xhr.send();
-    }
+document.addEventListener("keydown", checkForEnter);
+function checkForEnter(e) {
+  if (e.keyCode == 13) {
+    username = document.getElementById("usernameInput").value
+    userMessage = document.getElementById("userMessageInput").value
+    Chatty.addMessage(username, userMessage)
   }
-}())
+}
