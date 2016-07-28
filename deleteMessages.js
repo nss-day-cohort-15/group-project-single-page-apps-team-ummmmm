@@ -1,6 +1,9 @@
-// var message_container = document.querySelector('.message');
-// message_container.addEventListener("click", function(e){
+// var container = document.querySelector('#userMessageDisplay');
+
+// function button(container, div)
+// container.addEventListener("click", function(e){
 //   if(e.target.className === "remove"){
-//     message_container.removeChild(this);
+//     console.log('working');
+//     div.removeChild(this);
 //   }
 // })
