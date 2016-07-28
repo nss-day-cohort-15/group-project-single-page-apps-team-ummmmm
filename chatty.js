@@ -29,7 +29,7 @@ var counter = 0;
         counter++;
       } else {
       document.getElementById("userMessageDisplay").innerHTML +=
-        `<p class='message greyBackground'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
+        `<p class='message greenBackground'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
         counter++;
       }
     },
