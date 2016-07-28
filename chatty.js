@@ -20,18 +20,16 @@ var Chatty = (function (){
 
     showMessage: function (message){
       var message_div = document.querySelector("#userMessageDisplay");
- //HERE------>>//message_div.innerHTML = ""
+      message_div.innerHTML = ""
       message.forEach(function(content){
       message_div.innerHTML +=  `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
-                       <button class='remove'>delete</button></p>`;
-
-        message_div.addEventListener("click", function(e){
-          if(e.target.className === "remove"){
-            message_div.removeChild(e.target.parentNode);
-//UNDER HERE---------->>
-            _message.splice(e.parentNode);
-          }
-        })
+                       <button class='remove'>Delete</button></p>`;
+      message_div.addEventListener("click", function(e){
+        if(e.target.className === "remove"){
+          message_div.removeChild(e.target.parentNode);
+          message.splice(e.target.parentNode,1);
+        }
+      })
       })
     }
   }
