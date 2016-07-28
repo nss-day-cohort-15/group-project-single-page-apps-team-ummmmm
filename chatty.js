@@ -26,13 +26,13 @@ var Chatty = (function (){
       message.forEach(function(content){
       message_div.innerHTML +=  `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
                        <button class='remove'>delete</button></p>`;
-  })
+      })
       message_div.addEventListener("click", function(e){
       if(e.target.className === "remove"){
       message_div.removeChild(e.target.parentNode);
       checkForEmpty()
       }
-  })
+      })
     },
 
     clearMessage: function () {
@@ -40,13 +40,10 @@ var Chatty = (function (){
       _message = []
       Chatty.showMessage(_message)
       checkForEmpty()
-  })
+      })
     },
 
-
-  }
-
-
+ }
 
 function checkForEmpty () {
   if (_message === []) {
