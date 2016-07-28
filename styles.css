@@ -6,14 +6,28 @@
   background-color: darkgrey;
 }
 
+.container{
+  margin-top: 2%;
+}
+
+input[type="text"]{
+  margin-bottom: 1%;
+}
+
+input[type="text"]:focus{
+  background-color: lightgreen;
+}
+
 .large{
   font-size: 2em;
 }
 
 .remove{
-  border-radius: 10px;
+  border-radius: 8px;
+  font-size: .8em;
   background-color: red;
   color: white;
+  margin-bottom: 1%;
 }
 
 .textAreaMinWidth {
@@ -22,6 +36,11 @@
   border: 3px solid black;
 }
 
+.message{
+  margin-left: 2%;
+  margin-right: 2%;
+
+}
 
 .boldUser {
   font-size: 1.25em;

@@ -1,4 +1,3 @@
-
 document.addEventListener("keydown", checkForEnter);
 function checkForEnter(e) {
   if (e.keyCode == 13) {
