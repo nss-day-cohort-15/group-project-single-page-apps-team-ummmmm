@@ -13,20 +13,21 @@ var Chatty = (function (){
     },
 
     addMessage: function (username, userMessage) {
-      document.getElementById("userMessageDisplay").innerHTML +=
-        `<p class='message'><span class='boldUser'>${username}:</span> ${userMessage}<button class='remove'>delete</button></p>`;
+      userMessageObject = {"user": username, "message": userMessage}
+      _message.push(userMessageObject)
+      Chatty.showMessage(_message)
       },
 
     showMessage: function (message){
-      var messages_div = document.querySelector('#userMessageDisplay');
+      var message_div = document.querySelector("#userMessageDisplay");
+      message_div.innerHTML = ""
+
       message.forEach(function(content){
-      messages_div.innerHTML += `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
+      message_div.innerHTML +=  `<p class='message'><span class='boldUser'>${content.user}:</span> ${content.message}
                        <button class='remove'>delete</button></p>`;
      })
-
 },
-
   }
 }())
 
-
+Chatty.getMessage(Chatty.showMessage);
