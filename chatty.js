@@ -30,6 +30,7 @@ var Chatty = (function (){
       message_div.addEventListener("click", function(e){
       if(e.target.className === "remove"){
       message_div.removeChild(e.target.parentNode);
+      message.splice(e.target.parentNode, 1);
       }
       })
     },
