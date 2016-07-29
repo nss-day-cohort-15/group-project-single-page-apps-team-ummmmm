@@ -13,6 +13,7 @@
 
 input[type="text"]{
   margin-bottom: 1%;
+  border-radius: 3px;
 }
 
 input[type="text"]:focus{
@@ -35,12 +36,12 @@ input[type="text"]:focus{
   min-width: 100%;
   min-height: 500px;
   border: 3px solid black;
+  border-radius: 1%;
 }
 
 .message{
   margin-left: 2%;
   margin-right: 2%;
-
 }
 
 .boldUser {
@@ -54,4 +55,9 @@ p:nth-child(even){
 
 .smallLogo {
   width: 50%;
+  height: auto;
+}
+
+#clearButton {
+  border-radius: 3px;
 }
